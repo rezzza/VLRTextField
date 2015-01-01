@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 RezZza. All rights reserved.
 //
 
-#import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
+#import <VLRJVFloatLabeledTextField/JVFloatLabeledTextField.h>
 
 typedef NS_ENUM(NSInteger, VLRTextFieldErrorCode)
 {
