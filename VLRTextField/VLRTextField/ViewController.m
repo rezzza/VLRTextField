@@ -93,7 +93,9 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
     name.delegate = self;
     
     UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [sendButton setSize:CGSizeMake(80.0f, 30.0f)];
     [sendButton setTitle:@"Send" forState:UIControlStateNormal];
+    [sendButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [sendButton addTarget:self action:@selector(send) forControlEvents:UIControlEventTouchUpInside];
     [sendButton setCenter:CGPointMake(PPScreenWidth() / 2.0f, CGRectGetMaxY(company.frame) + 40.0f)];
     [self.view addSubview:sendButton];
