@@ -1,2 +1,2 @@
-pod 'JVFloatLabeledTextField', :git => 'https://github.com/ipodishima/JVFloatLabeledTextField.git', :commit => '02f0a5fd57cb1cad0303db06eb954c5d9ed168d9'
+pod 'VLRJVFloatLabeledTextField'
 pod 'PPHelpMe'

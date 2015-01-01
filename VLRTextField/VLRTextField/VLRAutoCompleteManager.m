@@ -208,10 +208,10 @@
                                                            @"Microsoft"
                                                            ];
                           });
-            // If nothing is entered, use the first company in the list
+            // If nothing is entered, return nothing
             if ([prefix length] == 0)
             {
-                return autocompleteCompanyArray[0];
+                return @"";
             }
             
             NSString *stringToLookFor = prefix;
