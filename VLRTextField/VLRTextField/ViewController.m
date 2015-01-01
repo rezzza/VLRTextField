@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "VLRTextField.h"
+#import "VLRFormService.h"
 
 #import "VLRTextField+Form.h"
 
@@ -23,7 +24,7 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
 
 @interface ViewController () <UITextFieldDelegate>
 
-@property (nonatomic, strong) VLRTextFieldManager *registerTextFieldManager;
+@property (nonatomic, strong) VLRFormService *registerFormManager;
 
 @end
 
@@ -78,16 +79,16 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
     [self.view addSubview:passwordConfirmation];
     [self.view addSubview:company];
     
-    // You don't have register self as `UITextField` delegate but use `VLRTextFieldManager.delegate`. The class will automatically forward every methods
-    self.registerTextFieldManager          = [VLRTextFieldManager new];
-    self.registerTextFieldManager.delegate = self;
+    // You don't have register self as `UITextField` delegate but use `VLRFormService`. The class will automatically forward every methods
+    self.registerFormManager          = [VLRFormService new];
+    self.registerFormManager.delegate = self;
     
     // The order does matter (for next behavior)
-    [self.registerTextFieldManager addTextField:name];
-    [self.registerTextFieldManager addTextField:email];
-    [self.registerTextFieldManager addTextField:password];
-    [self.registerTextFieldManager addTextField:passwordConfirmation];
-    [self.registerTextFieldManager addTextField:company];
+    [self.registerFormManager addTextField:name];
+    [self.registerFormManager addTextField:email];
+    [self.registerFormManager addTextField:password];
+    [self.registerFormManager addTextField:passwordConfirmation];
+    [self.registerFormManager addTextField:company];
     
     // But even if you do set the delegate, you won't break anything: we handled it for you
     name.delegate = self;
@@ -103,9 +104,9 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
 
 
 - (void) send {
-    BOOL formValid = [self.registerTextFieldManager checkForm]; // Will check and display errors
+    BOOL formValid = [self.registerFormManager checkForm]; // Will check and display errors
     if (formValid) {
-        [self.registerTextFieldManager.activeField resignFirstResponder];
+        [self.registerFormManager.activeField resignFirstResponder];
         [self safelySend];
     }
 }
@@ -113,10 +114,10 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
 - (void) safelySend {
     
     // Check one last time just to be sure
-    BOOL formValid = [self.registerTextFieldManager checkFormAndShowErrors:NO];
+    BOOL formValid = [self.registerFormManager checkFormAndShowErrors:NO];
     
     if (formValid) {
-        NSDictionary *json = [self.registerTextFieldManager extractFieldsAsJson];
+        NSDictionary *json = [self.registerFormManager extractFieldsAsJson];
         NSLog(@"You would be ready to send: \n %@", json);
     }
     
@@ -124,7 +125,7 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
 
 #pragma mark - UITextField delegate
 
-// Next behavior is natively handled by `VLRTextFieldManager`
+// Next behavior is natively handled by `VLRFormService`
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField.returnKeyType == UIReturnKeyDone) {
         [self send];

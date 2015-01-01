@@ -1,18 +1,18 @@
 //
-//  VLRTextFieldManager.m
+//  VLRFormService.m
 //  VLRTextField
 //
 //  Created by Marian Paul on 2015-01-01.
 //  Copyright (c) 2015 RezZza. All rights reserved.
 //
 
-#import "VLRTextFieldManager.h"
+#import "VLRFormService.h"
 #import "VLRMultiDelegates.h"
 #import "VLRTextField.h"
 
 #import "VLRTextFieldMacros.h"
 
-@interface VLRTextFieldManager () <UITextFieldDelegate>
+@interface VLRFormService () <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableArray    *textFields;
 @property (nonatomic, strong) VLRMultiDelegates *delegates;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation VLRTextFieldManager
+@implementation VLRFormService
 
 - (instancetype)init {
     self = [super init];

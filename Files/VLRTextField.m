@@ -7,6 +7,8 @@
 //
 
 #import "VLRTextField.h"
+#import "VLRFormService.h"
+
 #import "NSString+VLRTextField.h"
 
 #import <PPHelpMe/PPHelpMe.h>

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E03D04FE1A55A12100EC265D /* VLRAutoCompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D04FD1A55A12100EC265D /* VLRAutoCompleteManager.m */; };
-		E03D05011A55A6F900EC265D /* VLRTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D05001A55A6F900EC265D /* VLRTextFieldManager.m */; };
+		E03D05011A55A6F900EC265D /* VLRFormService.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D05001A55A6F900EC265D /* VLRFormService.m */; };
 		E03D05041A55AB2100EC265D /* VLRMultiDelegates.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D05031A55AB2100EC265D /* VLRMultiDelegates.m */; };
 		E0794F591A559548000E9039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F581A559548000E9039 /* main.m */; };
 		E0794F5C1A559548000E9039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F5B1A559548000E9039 /* AppDelegate.m */; };
@@ -38,8 +38,8 @@
 		92639D50FCFE8DA39448A986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03D04FC1A55A12100EC265D /* VLRAutoCompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLRAutoCompleteManager.h; sourceTree = "<group>"; };
 		E03D04FD1A55A12100EC265D /* VLRAutoCompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLRAutoCompleteManager.m; sourceTree = "<group>"; };
-		E03D04FF1A55A6F900EC265D /* VLRTextFieldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLRTextFieldManager.h; path = ../../Files/VLRTextFieldManager.h; sourceTree = "<group>"; };
-		E03D05001A55A6F900EC265D /* VLRTextFieldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLRTextFieldManager.m; path = ../../Files/VLRTextFieldManager.m; sourceTree = "<group>"; };
+		E03D04FF1A55A6F900EC265D /* VLRFormService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLRFormService.h; path = ../../Files/VLRFormService.h; sourceTree = "<group>"; };
+		E03D05001A55A6F900EC265D /* VLRFormService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLRFormService.m; path = ../../Files/VLRFormService.m; sourceTree = "<group>"; };
 		E03D05021A55AB2100EC265D /* VLRMultiDelegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLRMultiDelegates.h; path = ../../Files/VLRMultiDelegates.h; sourceTree = "<group>"; };
 		E03D05031A55AB2100EC265D /* VLRMultiDelegates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLRMultiDelegates.m; path = ../../Files/VLRMultiDelegates.m; sourceTree = "<group>"; };
 		E03D05051A55B3CE00EC265D /* VLRTextFieldMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VLRTextFieldMacros.h; path = ../../Files/VLRTextFieldMacros.h; sourceTree = "<group>"; };
@@ -174,8 +174,8 @@
 				E0794F7E1A559607000E9039 /* VLRTextField.m */,
 				E0794F801A559698000E9039 /* NSString+VLRTextField.h */,
 				E0794F811A559698000E9039 /* NSString+VLRTextField.m */,
-				E03D04FF1A55A6F900EC265D /* VLRTextFieldManager.h */,
-				E03D05001A55A6F900EC265D /* VLRTextFieldManager.m */,
+				E03D04FF1A55A6F900EC265D /* VLRFormService.h */,
+				E03D05001A55A6F900EC265D /* VLRFormService.m */,
 				E03D05021A55AB2100EC265D /* VLRMultiDelegates.h */,
 				E03D05031A55AB2100EC265D /* VLRMultiDelegates.m */,
 				E03D05051A55B3CE00EC265D /* VLRTextFieldMacros.h */,
@@ -319,7 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E03D05041A55AB2100EC265D /* VLRMultiDelegates.m in Sources */,
-				E03D05011A55A6F900EC265D /* VLRTextFieldManager.m in Sources */,
+				E03D05011A55A6F900EC265D /* VLRFormService.m in Sources */,
 				E03D04FE1A55A12100EC265D /* VLRAutoCompleteManager.m in Sources */,
 				E0794F851A559D1A000E9039 /* VLRTextField+Form.m in Sources */,
 				E0794F5F1A559548000E9039 /* ViewController.m in Sources */,

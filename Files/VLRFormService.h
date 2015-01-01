@@ -1,5 +1,5 @@
 //
-//  VLRTextFieldManager.h
+//  VLRFormService.h
 //  VLRTextField
 //
 //  Created by Marian Paul on 2015-01-01.
@@ -14,7 +14,7 @@
 /**
  *  Handles some behaviors like checking form and going to next field
  */
-@interface VLRTextFieldManager : NSObject
+@interface VLRFormService : NSObject
 
 @property (nonatomic, weak          ) id <UITextFieldDelegate> delegate;
 @property (nonatomic, readonly        ) NSMutableArray    *textFields; // All text fields held by the manager

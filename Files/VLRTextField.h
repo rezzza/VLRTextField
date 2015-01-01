@@ -7,7 +7,6 @@
 //
 
 #import <JVFloatLabeledTextField/JVFloatLabeledTextField.h>
-#import "VLRTextFieldManager.h"
 
 typedef NS_ENUM(NSInteger, VLRTextFieldErrorCode)
 {
@@ -17,6 +16,7 @@ typedef NS_ENUM(NSInteger, VLRTextFieldErrorCode)
 };
 
 @class VLRTextField;
+@class VLRFormService;
 
 typedef BOOL (^VLRValidateContentBlock)(VLRTextField* textField);
 
@@ -53,7 +53,7 @@ typedef BOOL (^VLRValidateContentBlock)(VLRTextField* textField);
 @property (nonatomic, strong) UIColor *floatingLabelActiveValidTextColor UI_APPEARANCE_SELECTOR; // Default is blue
 @property (nonatomic, strong) UIColor *floatingLabelActiveUnvalidTextColor UI_APPEARANCE_SELECTOR; // Default is red
 
-@property (nonatomic, weak  ) VLRTextFieldManager *textFieldManager;
+@property (nonatomic, weak  ) VLRFormService *textFieldManager;
 
 /**
  *  Go through all the validation things you could have set up with properties

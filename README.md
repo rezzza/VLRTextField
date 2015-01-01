@@ -78,15 +78,17 @@ Notice `VLRAutoCompleteManager`. See [`HTAutocompleteTextField`](https://github.
 
 ##The one more thing
 
-Along with validating the content the user enters, you can also use `VLRTextFieldManager` to:
+Along with validating the content the user enters, you can also use `VLRFormService` to:
 
 - handle automatic next if `returnKeyType` is equal to `UIReturnKeyNext`
 - check form and show errors (or not)
 - extract a JSON as `NSDictionary` from registered textFields.
 
-### How to use `VLRTextFieldManager`
+Do not hesitate to subclass `VLRFormService` to add new behaviors fitting your need.
 
-    self.registerTextFieldManager          = [VLRTextFieldManager new];
+### How to use `VLRFormService`
+
+    self.registerTextFieldManager          = [VLRFormService new];
     self.registerTextFieldManager.delegate = self;
     
     // The order does matter (for next behavior)
@@ -119,5 +121,5 @@ This will use `formKeyPath` property on `VLRTextField`
 
 ### Delegate consideration
 
-Because `VLRTextFieldManager` handles some behaviors for you, each text field will have at least one delegate : `VLRTextFieldManager` instance.
-By setting `VLRTextFieldManager` `delegate` property to your controller for example, it is exactly the same as setting `delegate` to the controller for every text fields. See the sample to have a better view.
+Because `VLRFormService` handles some behaviors for you, each text field will have at least one delegate : `VLRFormService` instance.
+By setting `VLRFormService` `delegate` property to your controller for example, it is exactly the same as setting `delegate` to the controller for every text fields. See the sample to have a better view.
