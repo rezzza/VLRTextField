@@ -3,6 +3,9 @@ VLRTextField
 
 VeryLastRoom iOS textField
 
+![alt tag](http://i.imgur.com/SJHDV28.png)
+![alt tag](http://i.imgur.com/uV12PCn.png)
+
 # Purpose
 
 This class intention is to provide an extension to the power of two great libraries on `UITextField`:
