@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E03D04FE1A55A12100EC265D /* VLRAutoCompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D04FD1A55A12100EC265D /* VLRAutoCompleteManager.m */; };
+		E03D05011A55A6F900EC265D /* VLRTextFieldManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D05001A55A6F900EC265D /* VLRTextFieldManager.m */; };
+		E03D05041A55AB2100EC265D /* VLRMultiDelegates.m in Sources */ = {isa = PBXBuildFile; fileRef = E03D05031A55AB2100EC265D /* VLRMultiDelegates.m */; };
+		E0794F591A559548000E9039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F581A559548000E9039 /* main.m */; };
+		E0794F5C1A559548000E9039 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F5B1A559548000E9039 /* AppDelegate.m */; };
+		E0794F5F1A559548000E9039 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F5E1A559548000E9039 /* ViewController.m */; };
+		E0794F621A559548000E9039 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0794F601A559548000E9039 /* Main.storyboard */; };
+		E0794F641A559548000E9039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0794F631A559548000E9039 /* Images.xcassets */; };
+		E0794F671A559548000E9039 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0794F651A559548000E9039 /* LaunchScreen.xib */; };
+		E0794F731A559548000E9039 /* VLRTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F721A559548000E9039 /* VLRTextFieldTests.m */; };
+		E0794F7F1A559607000E9039 /* VLRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F7E1A559607000E9039 /* VLRTextField.m */; };
+		E0794F821A559698000E9039 /* NSString+VLRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F811A559698000E9039 /* NSString+VLRTextField.m */; };
+		E0794F851A559D1A000E9039 /* VLRTextField+Form.m in Sources */ = {isa = PBXBuildFile; fileRef = E0794F841A559D1A000E9039 /* VLRTextField+Form.m */; };
+		EF88E491B33866045C8A30A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92639D50FCFE8DA39448A986 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E0794F6D1A559548000E9039 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E0794F4B1A559548000E9039 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0794F521A559548000E9039;
+			remoteInfo = VLRTextField;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F741D37D8B61FFD7B0AB4D1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		92639D50FCFE8DA39448A986 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E03D04FC1A55A12100EC265D /* VLRAutoCompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLRAutoCompleteManager.h; sourceTree = "<group>"; };
+		E03D04FD1A55A12100EC265D /* VLRAutoCompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLRAutoCompleteManager.m; sourceTree = "<group>"; };
+		E03D04FF1A55A6F900EC265D /* VLRTextFieldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLRTextFieldManager.h; path = ../../Files/VLRTextFieldManager.h; sourceTree = "<group>"; };
+		E03D05001A55A6F900EC265D /* VLRTextFieldManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLRTextFieldManager.m; path = ../../Files/VLRTextFieldManager.m; sourceTree = "<group>"; };
+		E03D05021A55AB2100EC265D /* VLRMultiDelegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLRMultiDelegates.h; path = ../../Files/VLRMultiDelegates.h; sourceTree = "<group>"; };
+		E03D05031A55AB2100EC265D /* VLRMultiDelegates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLRMultiDelegates.m; path = ../../Files/VLRMultiDelegates.m; sourceTree = "<group>"; };
+		E03D05051A55B3CE00EC265D /* VLRTextFieldMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VLRTextFieldMacros.h; path = ../../Files/VLRTextFieldMacros.h; sourceTree = "<group>"; };
+		E0794F531A559548000E9039 /* VLRTextField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VLRTextField.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0794F571A559548000E9039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0794F581A559548000E9039 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0794F5A1A559548000E9039 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E0794F5B1A559548000E9039 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E0794F5D1A559548000E9039 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E0794F5E1A559548000E9039 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E0794F611A559548000E9039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E0794F631A559548000E9039 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E0794F661A559548000E9039 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E0794F6C1A559548000E9039 /* VLRTextFieldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VLRTextFieldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0794F711A559548000E9039 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0794F721A559548000E9039 /* VLRTextFieldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VLRTextFieldTests.m; sourceTree = "<group>"; };
+		E0794F7D1A559607000E9039 /* VLRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VLRTextField.h; path = ../../Files/VLRTextField.h; sourceTree = "<group>"; };
+		E0794F7E1A559607000E9039 /* VLRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VLRTextField.m; path = ../../Files/VLRTextField.m; sourceTree = "<group>"; };
+		E0794F801A559698000E9039 /* NSString+VLRTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+VLRTextField.h"; path = "../../Files/NSString+VLRTextField.h"; sourceTree = "<group>"; };
+		E0794F811A559698000E9039 /* NSString+VLRTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+VLRTextField.m"; path = "../../Files/NSString+VLRTextField.m"; sourceTree = "<group>"; };
+		E0794F831A559D1A000E9039 /* VLRTextField+Form.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VLRTextField+Form.h"; sourceTree = "<group>"; };
+		E0794F841A559D1A000E9039 /* VLRTextField+Form.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VLRTextField+Form.m"; sourceTree = "<group>"; };
+		F6C94705B514E2B7B24CCE15 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E0794F501A559548000E9039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF88E491B33866045C8A30A3 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0794F691A559548000E9039 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3AD395299D4C7C51ECD20E76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6C94705B514E2B7B24CCE15 /* Pods.debug.xcconfig */,
+				0F741D37D8B61FFD7B0AB4D1 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7D2E9BA81B830E012446453D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92639D50FCFE8DA39448A986 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0794F4A1A559548000E9039 = {
+			isa = PBXGroup;
+			children = (
+				E0794F551A559548000E9039 /* VLRTextField */,
+				E0794F6F1A559548000E9039 /* VLRTextFieldTests */,
+				E0794F541A559548000E9039 /* Products */,
+				3AD395299D4C7C51ECD20E76 /* Pods */,
+				7D2E9BA81B830E012446453D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E0794F541A559548000E9039 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E0794F531A559548000E9039 /* VLRTextField.app */,
+				E0794F6C1A559548000E9039 /* VLRTextFieldTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E0794F551A559548000E9039 /* VLRTextField */ = {
+			isa = PBXGroup;
+			children = (
+				E0794F7C1A5595F3000E9039 /* Files */,
+				E0794F5A1A559548000E9039 /* AppDelegate.h */,
+				E0794F5B1A559548000E9039 /* AppDelegate.m */,
+				E0794F5D1A559548000E9039 /* ViewController.h */,
+				E0794F5E1A559548000E9039 /* ViewController.m */,
+				E0794F601A559548000E9039 /* Main.storyboard */,
+				E0794F631A559548000E9039 /* Images.xcassets */,
+				E0794F651A559548000E9039 /* LaunchScreen.xib */,
+				E0794F561A559548000E9039 /* Supporting Files */,
+				E0794F831A559D1A000E9039 /* VLRTextField+Form.h */,
+				E0794F841A559D1A000E9039 /* VLRTextField+Form.m */,
+				E03D04FC1A55A12100EC265D /* VLRAutoCompleteManager.h */,
+				E03D04FD1A55A12100EC265D /* VLRAutoCompleteManager.m */,
+			);
+			path = VLRTextField;
+			sourceTree = "<group>";
+		};
+		E0794F561A559548000E9039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0794F571A559548000E9039 /* Info.plist */,
+				E0794F581A559548000E9039 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0794F6F1A559548000E9039 /* VLRTextFieldTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0794F721A559548000E9039 /* VLRTextFieldTests.m */,
+				E0794F701A559548000E9039 /* Supporting Files */,
+			);
+			path = VLRTextFieldTests;
+			sourceTree = "<group>";
+		};
+		E0794F701A559548000E9039 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0794F711A559548000E9039 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E0794F7C1A5595F3000E9039 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				E0794F7D1A559607000E9039 /* VLRTextField.h */,
+				E0794F7E1A559607000E9039 /* VLRTextField.m */,
+				E0794F801A559698000E9039 /* NSString+VLRTextField.h */,
+				E0794F811A559698000E9039 /* NSString+VLRTextField.m */,
+				E03D04FF1A55A6F900EC265D /* VLRTextFieldManager.h */,
+				E03D05001A55A6F900EC265D /* VLRTextFieldManager.m */,
+				E03D05021A55AB2100EC265D /* VLRMultiDelegates.h */,
+				E03D05031A55AB2100EC265D /* VLRMultiDelegates.m */,
+				E03D05051A55B3CE00EC265D /* VLRTextFieldMacros.h */,
+			);
+			name = Files;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E0794F521A559548000E9039 /* VLRTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0794F761A559548000E9039 /* Build configuration list for PBXNativeTarget "VLRTextField" */;
+			buildPhases = (
+				D7EDDBFB68D6025CFF4B0727 /* Check Pods Manifest.lock */,
+				E0794F4F1A559548000E9039 /* Sources */,
+				E0794F501A559548000E9039 /* Frameworks */,
+				E0794F511A559548000E9039 /* Resources */,
+				44F6B8388130615259B774A8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VLRTextField;
+			productName = VLRTextField;
+			productReference = E0794F531A559548000E9039 /* VLRTextField.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E0794F6B1A559548000E9039 /* VLRTextFieldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E0794F791A559548000E9039 /* Build configuration list for PBXNativeTarget "VLRTextFieldTests" */;
+			buildPhases = (
+				E0794F681A559548000E9039 /* Sources */,
+				E0794F691A559548000E9039 /* Frameworks */,
+				E0794F6A1A559548000E9039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E0794F6E1A559548000E9039 /* PBXTargetDependency */,
+			);
+			name = VLRTextFieldTests;
+			productName = VLRTextFieldTests;
+			productReference = E0794F6C1A559548000E9039 /* VLRTextFieldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E0794F4B1A559548000E9039 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = REZZZA;
+				TargetAttributes = {
+					E0794F521A559548000E9039 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					E0794F6B1A559548000E9039 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = E0794F521A559548000E9039;
+					};
+				};
+			};
+			buildConfigurationList = E0794F4E1A559548000E9039 /* Build configuration list for PBXProject "VLRTextField" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E0794F4A1A559548000E9039;
+			productRefGroup = E0794F541A559548000E9039 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E0794F521A559548000E9039 /* VLRTextField */,
+				E0794F6B1A559548000E9039 /* VLRTextFieldTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E0794F511A559548000E9039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0794F621A559548000E9039 /* Main.storyboard in Resources */,
+				E0794F671A559548000E9039 /* LaunchScreen.xib in Resources */,
+				E0794F641A559548000E9039 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0794F6A1A559548000E9039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44F6B8388130615259B774A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7EDDBFB68D6025CFF4B0727 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E0794F4F1A559548000E9039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E03D05041A55AB2100EC265D /* VLRMultiDelegates.m in Sources */,
+				E03D05011A55A6F900EC265D /* VLRTextFieldManager.m in Sources */,
+				E03D04FE1A55A12100EC265D /* VLRAutoCompleteManager.m in Sources */,
+				E0794F851A559D1A000E9039 /* VLRTextField+Form.m in Sources */,
+				E0794F5F1A559548000E9039 /* ViewController.m in Sources */,
+				E0794F5C1A559548000E9039 /* AppDelegate.m in Sources */,
+				E0794F7F1A559607000E9039 /* VLRTextField.m in Sources */,
+				E0794F821A559698000E9039 /* NSString+VLRTextField.m in Sources */,
+				E0794F591A559548000E9039 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0794F681A559548000E9039 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E0794F731A559548000E9039 /* VLRTextFieldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E0794F6E1A559548000E9039 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0794F521A559548000E9039 /* VLRTextField */;
+			targetProxy = E0794F6D1A559548000E9039 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E0794F601A559548000E9039 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0794F611A559548000E9039 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E0794F651A559548000E9039 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0794F661A559548000E9039 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E0794F741A559548000E9039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E0794F751A559548000E9039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E0794F771A559548000E9039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6C94705B514E2B7B24CCE15 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VLRTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E0794F781A559548000E9039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F741D37D8B61FFD7B0AB4D1 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VLRTextField/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E0794F7A1A559548000E9039 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VLRTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VLRTextField.app/VLRTextField";
+			};
+			name = Debug;
+		};
+		E0794F7B1A559548000E9039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VLRTextFieldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VLRTextField.app/VLRTextField";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E0794F4E1A559548000E9039 /* Build configuration list for PBXProject "VLRTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0794F741A559548000E9039 /* Debug */,
+				E0794F751A559548000E9039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0794F761A559548000E9039 /* Build configuration list for PBXNativeTarget "VLRTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0794F771A559548000E9039 /* Debug */,
+				E0794F781A559548000E9039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E0794F791A559548000E9039 /* Build configuration list for PBXNativeTarget "VLRTextFieldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0794F7A1A559548000E9039 /* Debug */,
+				E0794F7B1A559548000E9039 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E0794F4B1A559548000E9039 /* Project object */;
+}
