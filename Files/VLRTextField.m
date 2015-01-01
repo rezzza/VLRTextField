@@ -13,7 +13,6 @@
 
 #import <PPHelpMe/PPHelpMe.h>
 
-#define FLOATING_ERROR_MESSAGE_VIEW_HEIGHT 15
 #define FLOATING_ERROR_MESSAGE_VIEW_ANIMATION_Y 5
 
 @interface VLRTextField ()
@@ -156,8 +155,11 @@
 - (void)addErrorViewFromError:(NSError *)error {
     if (self.errorLabel) return;
     
-    UILabel *errorMessageView = [UILabel newWithFrame:CGRectMake(0.0, FLOATING_ERROR_MESSAGE_VIEW_ANIMATION_Y, CGRectGetWidth(self.frame), FLOATING_ERROR_MESSAGE_VIEW_HEIGHT)];
-    errorMessageView.backgroundColor = self.backgroundColor;
+    UILabel *errorMessageView = [UILabel newWithFrame:CGRectMake(CGRectGetMinX(self.floatingLabel.frame),
+                                                                 self.floatingLabelYPadding + FLOATING_ERROR_MESSAGE_VIEW_ANIMATION_Y,
+                                                                 CGRectGetWidth(self.frame),
+                                                                 CGRectGetHeight(self.floatingLabel.frame))];
+    errorMessageView.backgroundColor = self.superview.backgroundColor;
     errorMessageView.text            = error.localizedDescription;
     errorMessageView.textColor       = self.floatingLabelActiveUnvalidTextColor;
     errorMessageView.font            = self.floatingLabel.font;
@@ -236,6 +238,32 @@
     else {
         [super setDelegate:delegate];
     }
+}
+
+#pragma mark - Overriding
+
+- (CGRect)applyOffsetOnTextRectIfNeeded:(CGRect)rect
+{
+    if ([self.text length] || self.errorLabel) {
+        CGFloat topInset = ceilf(self.floatingLabel.font.lineHeight + self.placeholderYPadding);
+        topInset = MIN(topInset, [self maxTopInset]);
+        rect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(topInset, 0.0f, 0.0f, 0.0f));
+    }
+    return rect;
+}
+
+- (CGRect) applyOffsetOnEditingTextRectIfNeeded:(CGRect)rect {
+    if ([self.text length] || self.errorLabel) {
+        CGFloat topInset = ceilf(self.floatingLabel.font.lineHeight + self.placeholderYPadding);
+        topInset = MIN(topInset, [self maxTopInset]);
+        rect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(topInset, 0.0f, 0.0f, 0.0f));
+    }
+    return rect;
+}
+
+- (CGFloat)maxTopInset
+{
+    return MAX(0, floorf(self.bounds.size.height - self.font.lineHeight - 4.0f));
 }
 
 @end

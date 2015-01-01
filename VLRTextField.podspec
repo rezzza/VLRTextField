@@ -29,6 +29,6 @@ All of these tests can be run on demand or while editing.
   s.platform     = 'ios'
   s.ios.deployment_target = "6.0"
   s.dependency "PPHelpMe", "~> 1.0.2"
-  s.dependency "VLRJVFloatLabeledTextField"
+  s.dependency "VLRJVFloatLabeledTextField", "~> 1.0.2"
 
 end

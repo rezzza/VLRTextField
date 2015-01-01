@@ -1,2 +1,2 @@
-pod 'VLRJVFloatLabeledTextField'
+pod 'VLRJVFloatLabeledTextField', '~> 1.0.2'
 pod 'PPHelpMe'

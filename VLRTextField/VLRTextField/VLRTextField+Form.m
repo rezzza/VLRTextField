@@ -14,8 +14,7 @@
 + (VLRTextField*)formTextFieldWithFrame:(CGRect)frame placeholder:(NSString*)placeholder
 {
     VLRTextField *tf                       = [VLRTextField newWithFrame:frame];
-    tf.backgroundColor                     = [UIColor whiteColor];
-    tf.floatingLabelYPadding               = @(2.0f);
+    tf.floatingLabelYPadding               = 0.0f;
     tf.returnKeyType                       = UIReturnKeyNext;
     tf.placeholder                         = placeholder;
     tf.font                                = [UIFont systemFontOfSize:16.0f];
