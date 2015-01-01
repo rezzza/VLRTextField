@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 All of these tests can be run on demand or while editing.
                    DESC
 
-  s.homepage     = "http://EXAMPLE/VLRTextField"
+  s.homepage     = "https://github.com/rezzza/VLRTextField"
   s.screenshots  = "http://i.imgur.com/9DRdZ71.png", "http://i.imgur.com/mss3Gwe.png"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Rezzza" => "contact@verylastroom.com" }
