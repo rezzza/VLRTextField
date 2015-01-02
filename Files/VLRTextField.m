@@ -217,6 +217,10 @@
     BOOL textChanged = [text isEqualToString:self.text] ? NO : YES;
     [super setText:text];
     
+    if (!self.userInteractionEnabled) {
+        [self.floatingLabel removeFromSuperview];
+    }
+    
     if (textChanged) {
         [self handleTextChange];
     }
@@ -244,7 +248,7 @@
 
 - (CGRect)applyOffsetOnTextRectIfNeeded:(CGRect)rect
 {
-    if ([self.text length] || self.errorLabel) {
+    if (([self.text length] || self.errorLabel) && self.userInteractionEnabled) {
         CGFloat topInset = ceilf(self.floatingLabel.font.lineHeight + self.placeholderYPadding);
         topInset = MIN(topInset, [self maxTopInset]);
         rect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(topInset, 0.0f, 0.0f, 0.0f));
@@ -253,7 +257,7 @@
 }
 
 - (CGRect) applyOffsetOnEditingTextRectIfNeeded:(CGRect)rect {
-    if ([self.text length] || self.errorLabel) {
+    if (([self.text length] || self.errorLabel) && self.userInteractionEnabled) {
         CGFloat topInset = ceilf(self.floatingLabel.font.lineHeight + self.placeholderYPadding);
         topInset = MIN(topInset, [self maxTopInset]);
         rect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(topInset, 0.0f, 0.0f, 0.0f));
