@@ -226,6 +226,14 @@
     }
 }
 
+- (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled {
+    [super setUserInteractionEnabled:userInteractionEnabled];
+    
+    if (!userInteractionEnabled) {
+        [self.floatingLabel removeFromSuperview];
+    }
+}
+
 #pragma mark - Notification Management
 
 - (void)vlrTextFieldDidChange:(NSNotification *)notification {
