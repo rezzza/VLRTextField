@@ -92,7 +92,6 @@ Do not hesitate to subclass `VLRFormService` to add new behaviors fitting your n
 ### How to use `VLRFormService`
 
     self.registerTextFieldManager          = [VLRFormService new];
-    self.registerTextFieldManager.delegate = self;
     
     // The order does matter (for next behavior)
     [self.registerTextFieldManager addTextField:name];
@@ -121,8 +120,3 @@ Check without displaying errors
 This will use `formKeyPath` property on `VLRTextField`
 
     NSDictionary *json = [self.registerTextFieldManager extractFieldsAsJson];
-
-### Delegate consideration
-
-Because `VLRFormService` handles some behaviors for you, each text field will have at least one delegate : `VLRFormService` instance.
-By setting `VLRFormService` `delegate` property to your controller for example, it is exactly the same as setting `delegate` to the controller for every text fields. See the sample to have a better view.

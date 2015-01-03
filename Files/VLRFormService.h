@@ -9,17 +9,14 @@
 @import UIKit;
 
 @class VLRTextField;
-@class VLRMultiDelegates;
 
 /**
  *  Handles some behaviors like checking form and going to next field
  */
 @interface VLRFormService : NSObject
 
-@property (nonatomic, weak          ) id <UITextFieldDelegate> delegate;
-@property (nonatomic, readonly      ) NSMutableArray      *textFields;// All text fields held by the manager
-@property (nonatomic, weak, readonly) VLRTextField        *activeField;// First responder field
-@property (nonatomic, readonly      ) VLRMultiDelegates   *delegates;// The delegate for `UITextField` protocol to handle multi objects as delegate
+@property (nonatomic, readonly      ) NSMutableArray *textFields;// All text fields held by the manager
+@property (nonatomic, weak, readonly) VLRTextField   *activeField;// First responder field
 
 /**
  *  Register a new text field to the form

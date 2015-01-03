@@ -18,6 +18,7 @@
 
 @interface VLRTextField ()
 @property (nonatomic, strong) UILabel *errorLabel;
+@property (nonatomic, strong) VLRMultiDelegates *delegates;
 @end
 
 @implementation VLRTextField
@@ -36,6 +37,8 @@
     self.floatingLabelActiveValidTextColor = [UIColor redColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(vlrTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
+    
+    self.delegates = [VLRMultiDelegates new];
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -245,13 +248,8 @@
 }
 
 - (void)setDelegate:(id<UITextFieldDelegate>)delegate {
-    if (self.textFieldManager) {
-        [super setDelegate:(id<UITextFieldDelegate>)self.textFieldManager.delegates];
-        [self.textFieldManager.delegates addDelegate:delegate];
-    }
-    else {
-        [super setDelegate:delegate];
-    }
+    [self.delegates addDelegate:delegate];
+    [super setDelegate:(id<UITextFieldDelegate>)self.delegates];
 }
 
 #pragma mark - Overriding

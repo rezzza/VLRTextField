@@ -7,7 +7,6 @@
 //
 
 #import "VLRFormService.h"
-#import "VLRMultiDelegates.h"
 #import "VLRTextField.h"
 
 #import "VLRTextFieldMacros.h"
@@ -15,23 +14,11 @@
 @interface VLRFormService () <UITextFieldDelegate>
 
 @property (nonatomic, strong) NSMutableArray    *textFields;
-@property (nonatomic, strong) VLRMultiDelegates *delegates;
 @property (nonatomic, weak  ) VLRTextField      *activeField;
 
 @end
 
 @implementation VLRFormService
-
-- (instancetype)init {
-    self = [super init];
-    
-    if (self) {
-        self->_delegates = [VLRMultiDelegates new];
-        [self->_delegates addDelegate:self];
-    }
-    
-    return self;
-}
 
 #pragma mark - Public methods
 
@@ -39,8 +26,7 @@
     NSParameterAssert([textField isKindOfClass:[VLRTextField class]]);
     
     [self.textFields addObject:textField];
-    textField.delegate = (id<UITextFieldDelegate>)self.delegates;
-    textField.textFieldManager = self;
+    textField.delegate = self;
 }
 
 - (BOOL)checkForm {
@@ -84,12 +70,6 @@
         }
     }
     return json;
-}
-
-#pragma mark - Multi delegates handling
-
-- (void)setDelegate:(id<UITextFieldDelegate>)delegate {
-    [self.delegates addDelegate:delegate];
 }
 
 #pragma mark - Custom getters

@@ -79,9 +79,7 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
     [self.view addSubview:passwordConfirmation];
     [self.view addSubview:company];
     
-    // You don't have register self as `UITextField` delegate but use `VLRFormService`. The class will automatically forward every methods
     self.registerFormManager          = [VLRFormService new];
-    self.registerFormManager.delegate = self;
     
     // The order does matter (for next behavior)
     [self.registerFormManager addTextField:name];
@@ -90,8 +88,8 @@ static NSString *REGULAR_EXPRESSION_EMAIL = @"[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(\\
     [self.registerFormManager addTextField:passwordConfirmation];
     [self.registerFormManager addTextField:company];
     
-    // But even if you do set the delegate, you won't break anything: we handled it for you
-    name.delegate = self;
+    // We only need company to have self as delegate since the send is done here
+    company.delegate = self;
     
     UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [sendButton setSize:CGSizeMake(80.0f, 30.0f)];
