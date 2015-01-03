@@ -114,11 +114,19 @@
     }
     
     if (self.activeField.returnKeyType == UIReturnKeyNext) {
-        NSUInteger nextIndex = textFieldIndex + 1;
-        if (nextIndex < [self.textFields count]) {
-            UITextField *nextTextField = self.textFields[nextIndex];
-            [nextTextField becomeFirstResponder];
-        }
+        UITextField *nextTextField = nil;
+        NSUInteger nextIndex = textFieldIndex;
+        do {
+            nextIndex = nextIndex + 1;
+            if (nextIndex < [self.textFields count]) {
+                nextTextField = self.textFields[nextIndex];
+            }
+            else {
+                nextTextField = nil;
+            }
+        } while (![nextTextField canBecomeFirstResponder] && nextTextField);
+        
+        [nextTextField becomeFirstResponder];
     }
 }
 
