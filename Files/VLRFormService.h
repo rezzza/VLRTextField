@@ -48,4 +48,14 @@
  */
 - (NSDictionary *)extractFieldsAsJson;
 
+/**
+ *  Move to next responder text field in the array
+ */
+- (void) goToNextTextField;
+
+/**
+ *  Move to previous responder text field in the array
+ */
+- (void) goToPreviousTextField;
+
 @end

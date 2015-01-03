@@ -110,6 +110,23 @@
     }
 }
 
+- (void)goToPreviousTextField {
+    NSUInteger textFieldIndex = [self.textFields indexOfObject:self.activeField];
+    if (textFieldIndex == NSNotFound) {
+        VLRTextFieldLog(@"%@ not found on active fields", self.activeField);
+        return;
+    }
+    
+    UITextField *previousTextField = nil;
+    NSUInteger previousIndex = textFieldIndex;
+    do {
+        previousIndex = previousIndex - 1;
+        previousTextField = self.textFields[previousIndex];
+    } while (![previousTextField canBecomeFirstResponder] && previousTextField > 0);
+    
+    [previousTextField becomeFirstResponder];
+}
+
 #pragma mark Protocol implementation
 
 - (void)textFieldDidBeginEditing:(VLRTextField *)textField {
