@@ -15,6 +15,6 @@
 #   define VLRTextFieldLog(...)
 #endif
 
-#define OBJ_OR_NULL(obj) (obj ? : [NSNull null])
+#define VLR_WALLET_OBJ_OR_NULL_IF_NIL(obj) (obj ? : [NSNull null])
 
 #endif

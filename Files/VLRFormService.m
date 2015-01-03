@@ -80,7 +80,7 @@
             VLRTextFieldLog(@"Value '%@' ignored because you did not specified a formKeyPath", tf.text);
         }
         else {
-            json[tf.formKeyPath] = OBJ_OR_NULL(tf.text);
+            json[tf.formKeyPath] = VLR_WALLET_OBJ_OR_NULL_IF_NIL(tf.text);
         }
     }
     return json;
