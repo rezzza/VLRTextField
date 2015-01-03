@@ -8,6 +8,7 @@
 
 #import "VLRTextField.h"
 #import "VLRFormService.h"
+#import "VLRMultiDelegates.h"
 
 #import "NSString+VLRTextField.h"
 
@@ -246,6 +247,7 @@
 - (void)setDelegate:(id<UITextFieldDelegate>)delegate {
     if (self.textFieldManager) {
         [super setDelegate:(id<UITextFieldDelegate>)self.textFieldManager.delegates];
+        [self.textFieldManager.delegates addDelegate:delegate];
     }
     else {
         [super setDelegate:delegate];
