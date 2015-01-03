@@ -27,14 +27,14 @@
 
 - (void) commonVLRInit
 {
-    self.fillRequired                      = YES;
-    self.messageRequired                   = @"Please enter some text";
-    self.minimumNumberOfCharacters         = 0;
-    self.shouldCheckWhileEditing           = NO;
-    self.shouldCleanSpacesBeforeRegex      = NO;
-    self.shouldTrimWhitespacesBeforeRegex  = YES;
-    self.floatingLabelActiveValidTextColor = [UIColor blueColor];
-    self.floatingLabelActiveValidTextColor = [UIColor redColor];
+    self.fillRequired                        = YES;
+    self.messageRequired                     = @"Please enter some text";
+    self.minimumNumberOfCharacters           = 0;
+    self.shouldCheckWhileEditing             = NO;
+    self.shouldCleanSpacesBeforeRegex        = NO;
+    self.shouldTrimWhitespacesBeforeRegex    = YES;
+    self.floatingLabelActiveValidTextColor   = [UIColor blueColor];
+    self.floatingLabelActiveUnvalidTextColor = [UIColor redColor];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(vlrTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
     
