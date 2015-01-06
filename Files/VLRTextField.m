@@ -9,6 +9,7 @@
 #import "VLRTextField.h"
 #import "VLRFormService.h"
 #import "VLRMultiDelegates.h"
+#import "VLRTextFieldMacros.h"
 
 #import "NSString+VLRTextField.h"
 
@@ -98,6 +99,12 @@
 
 - (BOOL)isContentValid:(NSError *__autoreleasing *)error
 {
+    if (![self canBecomeFirstResponder]) {
+        // We assume it's content is valid
+        VLRTextFieldLog(@"The text field (%@) can not became first responder. Assuming it's content is valid", self.text);
+        return YES;
+    }
+    
     // Before anything, just trim characters
     if (self.shouldTrimWhitespacesBeforeRegex) {
         self.text = [self.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
