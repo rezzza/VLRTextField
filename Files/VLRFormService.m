@@ -44,6 +44,8 @@
             if (showErrors) {
                 [tf addErrorViewFromError:error];
             }
+            VLRTextFieldLog(@"Error: %@", error.localizedDescription);
+
             formValid &= NO;
         } else {
             [tf removeErrorView];
@@ -118,11 +120,16 @@
     }
     
     UITextField *previousTextField = nil;
-    NSUInteger previousIndex = textFieldIndex;
+    NSInteger previousIndex = textFieldIndex;
     do {
         previousIndex = previousIndex - 1;
-        previousTextField = self.textFields[previousIndex];
-    } while (![previousTextField canBecomeFirstResponder] && previousTextField > 0);
+        if (previousIndex >= 0) {
+            previousTextField = self.textFields[previousIndex];
+        }
+        else {
+            previousTextField = nil;
+        }
+    } while (![previousTextField canBecomeFirstResponder] && previousIndex >= 0);
     
     [previousTextField becomeFirstResponder];
 }
