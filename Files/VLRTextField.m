@@ -166,14 +166,15 @@
 - (void)addErrorViewFromError:(NSError *)error {
     if (self.errorLabel) return;
     
-    UILabel *errorMessageView = [UILabel newWithFrame:CGRectMake(CGRectGetMinX(self.floatingLabel.frame),
+    UILabel *errorMessageView = [UILabel newWithFrame:CGRectMake(0.0f,
                                                                  self.floatingLabelYPadding + FLOATING_ERROR_MESSAGE_VIEW_ANIMATION_Y,
                                                                  CGRectGetWidth(self.frame),
                                                                  CGRectGetHeight(self.floatingLabel.frame))];
-    errorMessageView.backgroundColor = self.superview.backgroundColor;
+    errorMessageView.backgroundColor = self.superview.backgroundColor ? : self.backgroundColor;
     errorMessageView.text            = error.localizedDescription;
     errorMessageView.textColor       = self.floatingLabelActiveUnvalidTextColor;
     errorMessageView.font            = self.floatingLabel.font;
+    errorMessageView.textAlignment   = self.textAlignment;
     errorMessageView.alpha           = 0.0;
     
     [self addSubview:errorMessageView];
@@ -246,6 +247,12 @@
 }
 
 #pragma mark - Notification Management
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    [self.errorLabel setFrame:CGRectMake(0.0f, CGRectGetMinY(self.floatingLabel.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.floatingLabel.frame))];
+}
 
 - (void)vlrTextFieldDidChange:(NSNotification *)notification {
     VLRTextField *textField = [notification object];
