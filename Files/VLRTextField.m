@@ -251,7 +251,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    [self.errorLabel setFrame:CGRectMake(0.0f, CGRectGetMinY(self.floatingLabel.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.floatingLabel.frame))];
+    [self.errorLabel setFrame:CGRectMake(0.0f, self.floatingLabelYPadding, CGRectGetWidth(self.frame), CGRectGetHeight(self.floatingLabel.frame))];
 }
 
 - (void)vlrTextFieldDidChange:(NSNotification *)notification {
