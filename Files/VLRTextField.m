@@ -26,7 +26,7 @@
 
 #pragma mark - Object Life
 
-- (void) commonVLRInit
+- (void)commonVLRInit
 {
     self.fillRequired                        = YES;
     self.messageRequired                     = @"Please enter some text";
@@ -36,6 +36,7 @@
     self.shouldTrimWhitespacesBeforeRegex    = YES;
     self.floatingLabelActiveValidTextColor   = [UIColor blueColor];
     self.floatingLabelActiveUnvalidTextColor = [UIColor redColor];
+    self.applyTextOffsetOnEditing            = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(vlrTextFieldDidChange:) name:UITextFieldTextDidChangeNotification object:nil];
     
@@ -76,7 +77,7 @@
 
 #pragma mark - Checking methods
 
-- (BOOL) isContentValidWithRegex:(NSString*)regex
+- (BOOL)isContentValidWithRegex:(NSString*)regex
 {
     NSParameterAssert(regex);
     NSError *regexError = nil;
@@ -210,7 +211,7 @@
     }
 }
 
-- (void) handleTextChange
+- (void)handleTextChange
 {
     [self removeErrorView];
     if (self.shouldCheckWhileEditing)
@@ -224,7 +225,7 @@
     }
 }
 
-- (void) setText:(NSString *)text
+- (void)setText:(NSString *)text
 {
     BOOL textChanged = [text isEqualToString:self.text] ? NO : YES;
     [super setText:text];
@@ -268,9 +269,8 @@
 
 #pragma mark - Overriding
 
-- (CGRect)applyOffsetOnTextRectIfNeeded:(CGRect)rect
-{
-    if (self.userInteractionEnabled) {
+- (CGRect)applyOffsetOnTextRectIfNeeded:(CGRect)rect {
+    if (self.applyTextOffsetOnEditing && (self.userInteractionEnabled && [self.text length])) {
         CGFloat topInset = ceilf(self.floatingLabel.font.lineHeight + self.placeholderYPadding);
         topInset = MIN(topInset, [self maxTopInset]);
         rect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(topInset, 0.0f, 0.0f, 0.0f));
@@ -278,8 +278,8 @@
     return rect;
 }
 
-- (CGRect) applyOffsetOnEditingTextRectIfNeeded:(CGRect)rect {
-    if (self.userInteractionEnabled) {
+- (CGRect)applyOffsetOnEditingTextRectIfNeeded:(CGRect)rect {
+    if (self.applyTextOffsetOnEditing && (self.userInteractionEnabled && [self.text length])) {
         CGFloat topInset = ceilf(self.floatingLabel.font.lineHeight + self.placeholderYPadding);
         topInset = MIN(topInset, [self maxTopInset]);
         rect = UIEdgeInsetsInsetRect(rect, UIEdgeInsetsMake(topInset, 0.0f, 0.0f, 0.0f));
@@ -287,11 +287,10 @@
     return rect;
 }
 
-- (CGFloat)maxTopInset
-{
+- (CGFloat)maxTopInset {
     return MAX(0, floorf(self.bounds.size.height - self.font.lineHeight - 4.0f));
 }
 
 @end
 
-NSString *VLRTextFieldErrorDomain = @"VLRTextFieldErrorDomain";
+NSString * const VLRTextFieldErrorDomain = @"VLRTextFieldErrorDomain";

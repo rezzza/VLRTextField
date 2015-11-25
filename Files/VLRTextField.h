@@ -49,6 +49,7 @@ typedef BOOL (^VLRValidateContentBlock)(VLRTextField* textField);
 @property (nonatomic, assign) BOOL shouldCheckWhileEditing; // Default is NO
 @property (nonatomic, assign) BOOL shouldCleanSpacesBeforeRegex; // Default is NO
 @property (nonatomic, assign) BOOL shouldTrimWhitespacesBeforeRegex; // Default is YES
+@property (nonatomic, assign) BOOL applyTextOffsetOnEditing; // Default is YES
 
 @property (nonatomic, strong) UIColor *floatingLabelActiveValidTextColor UI_APPEARANCE_SELECTOR; // Default is blue
 @property (nonatomic, strong) UIColor *floatingLabelActiveUnvalidTextColor UI_APPEARANCE_SELECTOR; // Default is red
@@ -91,4 +92,4 @@ typedef BOOL (^VLRValidateContentBlock)(VLRTextField* textField);
 
 @end
 
-extern NSString *VLRTextFieldErrorDomain;
+FOUNDATION_EXTERN NSString * const VLRTextFieldErrorDomain;
