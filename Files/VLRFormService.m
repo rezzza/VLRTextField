@@ -141,6 +141,7 @@
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
+    [textField layoutIfNeeded];
     if ([textField isEqual:self.activeField]) {
         self.activeField = nil;
     }
