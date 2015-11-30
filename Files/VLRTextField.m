@@ -188,7 +188,7 @@
      ^{
          if (self.errorLabel.alpha != 1.0f) {
              self.errorLabel.alpha = 1.0f;
-             [self.errorLabel setOrigin:CGPointMake(CGRectGetMinX(self.errorLabel.frame), CGRectGetMinY(self.errorLabel.frame) - FLOATING_ERROR_MESSAGE_VIEW_ANIMATION_Y)];
+             [self.errorLabel setOrigin:CGPointMake(CGRectGetMinX(self.errorLabel.frame), CGRectGetMinY(self.errorLabel.frame))];
          }
      }];
 }
