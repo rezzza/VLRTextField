@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "VLRTextField"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "VLRTextField enlarge floating and autocompleting text field power with input validation."
 
   s.description  = <<-DESC
@@ -23,7 +23,7 @@ All of these tests can be run on demand or while editing.
   s.screenshots  = "http://i.imgur.com/9DRdZ71.png", "http://i.imgur.com/mss3Gwe.png"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Rezzza" => "contact@verylastroom.com" }
-  s.source       = { :git => "https://github.com/rezzza/VLRTextField.git", :tag => "0.0.4" }
+  s.source       = { :git => "https://github.com/rezzza/VLRTextField.git", :tag => "0.0.5" }
   s.source_files = "Files/*.{h,m}"
   s.requires_arc = true
   s.platform     = 'ios'
