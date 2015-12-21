@@ -167,7 +167,7 @@
 - (void)addErrorViewFromError:(NSError *)error {
     if (self.errorLabel) return;
     
-    self.floatingLabel.hidden = true;
+    self.floatingLabel.hidden = YES;
     
     UILabel *errorMessageView = [UILabel newWithFrame:CGRectMake(0.0f,
                                                                  self.floatingLabelYPadding + FLOATING_ERROR_MESSAGE_VIEW_ANIMATION_Y,
@@ -197,7 +197,7 @@
 
 - (void)removeErrorView {
     if (self.errorLabel) {
-        self.floatingLabel.hidden = false;
+        self.floatingLabel.hidden = NO;
     
         UILabel *errorLabel = self.errorLabel;
         self.errorLabel = nil;
